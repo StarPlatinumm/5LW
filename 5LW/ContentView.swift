@@ -14,8 +14,8 @@ struct ContentView: View {
         }
         .padding()
         .background(.black)
-        
     }
+
 }
 
 #Preview {

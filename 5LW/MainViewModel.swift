@@ -2,7 +2,7 @@ import SwiftUI
 
 final class GameViewModel: ObservableObject {
     
-    @Published var grid: [[String]] = Array(repeating: Array(repeating: "", count: 5), count: 6)
+    @Published private(set) var grid: [[String]] = Array(repeating: Array(repeating: "", count: 5), count: 6)
     @Published var alertItem: AlertItem?
     private var theWord: String = "apple"
     private var currentRow: Int = 0
@@ -58,11 +58,11 @@ final class GameViewModel: ObservableObject {
         }
     }
     
-    func isValid() -> Bool {
+    private func isValid() -> Bool {
         return grid[currentRow].count == 5 && ALL_WORDS.contains(currentRowWord)
     }
     
-    func isGuessed() -> Bool {
+    private func isGuessed() -> Bool {
         return currentRowWord == theWord
     }
     

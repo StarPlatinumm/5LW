@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct KeyboardView: View {
-
+    
     @EnvironmentObject private var vM: GameViewModel
-
+    
     var body: some View {
         VStack(spacing: 10) {
             HStack(spacing: 5) {

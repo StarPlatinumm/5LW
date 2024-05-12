@@ -3,10 +3,10 @@ import SwiftUI
 struct KeyView: View {
     
     @EnvironmentObject private var vM: GameViewModel
-    let letter: String?
-    let icon: String?
-    let letterKeyAction: ((String) -> Void)?
-    let iconKeyAction: (() -> Void)?
+    private let letter: String?
+    private let icon: String?
+    private let letterKeyAction: ((String) -> Void)?
+    private let iconKeyAction: (() -> Void)?
     
     init(letter: String, action: @escaping (String) -> Void) {
         self.letter = letter
