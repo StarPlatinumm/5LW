@@ -9,16 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject private var vM = GameViewModel()
-    
     var body: some View {
         VStack {
             HeaderView()
             Spacer()
-            WordsGridView(vM: vM)
+            WordsGridView()
             Spacer()
             Spacer()
-            KeyboardView(vM: vM)
+            KeyboardView()
             Spacer()
         }
         .padding()

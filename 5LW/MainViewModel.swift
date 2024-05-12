@@ -6,7 +6,6 @@ final class GameViewModel: ObservableObject {
     
     func setFirstLetter(letter: String) {
         grid[0][0] = letter
-        print(grid[0][0])
     }
 
 }

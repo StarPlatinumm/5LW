@@ -4,7 +4,7 @@ struct WordsGridView: View {
 
     var currentRow: Int = 0
     var currentCol: Int = 0
-    @StateObject var vM: GameViewModel
+    @EnvironmentObject var vM: GameViewModel
     
     var body: some View {
         VStack(spacing: 5) {
@@ -22,5 +22,5 @@ struct WordsGridView: View {
 
 
 #Preview {
-    WordsGridView(vM: GameViewModel())
+    WordsGridView()
 }

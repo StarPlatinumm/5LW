@@ -4,21 +4,17 @@ struct KeyView: View {
     
     let letter: String
     let icon: String
-    private var vM: GameViewModel
+    @EnvironmentObject private var vM: GameViewModel
     
-    init(letter: String, vM: GameViewModel) {
+    init(letter: String) {
         self.letter = letter
         self.icon = ""
-        self.vM = vM
     }
     
-    init(icon: String, vM: GameViewModel) {
+    init(icon: String) {
         self.icon = icon
         self.letter = ""
-        self.vM = vM
     }
-    
-    
     
     var body: some View {
         if (icon == "") {
@@ -60,9 +56,9 @@ struct KeyView: View {
 
 #Preview {
     Group {
-        KeyView(letter: "K", vM: GameViewModel())
-        KeyView(icon: "delete.left", vM: GameViewModel())
-        KeyView(icon: "checkmark", vM: GameViewModel())
+        KeyView(letter: "K")
+        KeyView(icon: "delete.left")
+        KeyView(icon: "checkmark")
     }
     
 }

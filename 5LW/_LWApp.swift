@@ -22,10 +22,12 @@ struct _LWApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    @StateObject private var vM = GameViewModel()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(vM)
         }
         .modelContainer(sharedModelContainer)
     }
