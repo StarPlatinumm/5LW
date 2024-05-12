@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct WordsGridView: View {
-
-    var currentRow: Int = 0
-    var currentCol: Int = 0
+    
     @EnvironmentObject var vM: GameViewModel
     
     var body: some View {
@@ -17,6 +15,11 @@ struct WordsGridView: View {
             }
         }
         .padding()
+        .alert(item: $vM.alertItem, content: { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: .default(alertItem.buttonTitle, action: { alertItem.action() }))
+        })
     }
 }
 

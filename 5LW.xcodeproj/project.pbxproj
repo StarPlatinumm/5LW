@@ -21,6 +21,8 @@
 		6F28BB092BB21FF000CA0254 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F28BB082BB21FF000CA0254 /* LetterView.swift */; };
 		6F28BB0B2BB22A8300CA0254 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F28BB0A2BB22A8300CA0254 /* HeaderView.swift */; };
 		6F4FDD492BF0D2D200A4835F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4FDD482BF0D2D200A4835F /* MainViewModel.swift */; };
+		6F9E2EF42BF10A8300BCB3BB /* FakeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E2EF32BF10A8200BCB3BB /* FakeAPI.swift */; };
+		6F9E2EF62BF10E7500BCB3BB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E2EF52BF10E7500BCB3BB /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		6F28BB082BB21FF000CA0254 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 		6F28BB0A2BB22A8300CA0254 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6F4FDD482BF0D2D200A4835F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6F9E2EF32BF10A8200BCB3BB /* FakeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPI.swift; sourceTree = "<group>"; };
+		6F9E2EF52BF10E7500BCB3BB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				6F28BAD52BB2069900CA0254 /* _LWApp.swift */,
 				6F28BAD72BB2069900CA0254 /* ContentView.swift */,
 				6F4FDD482BF0D2D200A4835F /* MainViewModel.swift */,
+				6F9E2EF52BF10E7500BCB3BB /* Alert.swift */,
+				6F9E2EF32BF10A8200BCB3BB /* FakeAPI.swift */,
 				6F28BB012BB206EF00CA0254 /* Components */,
 				6F28BAD92BB2069900CA0254 /* Item.swift */,
 				6F28BADB2BB2069B00CA0254 /* Assets.xcassets */,
@@ -293,6 +299,8 @@
 				6F28BADA2BB2069900CA0254 /* Item.swift in Sources */,
 				6F28BB052BB21B3700CA0254 /* KeyboardView.swift in Sources */,
 				6F28BAD62BB2069900CA0254 /* _LWApp.swift in Sources */,
+				6F9E2EF42BF10A8300BCB3BB /* FakeAPI.swift in Sources */,
+				6F9E2EF62BF10E7500BCB3BB /* Alert.swift in Sources */,
 				6F28BB0B2BB22A8300CA0254 /* HeaderView.swift in Sources */,
 				6F4FDD492BF0D2D200A4835F /* MainViewModel.swift in Sources */,
 			);

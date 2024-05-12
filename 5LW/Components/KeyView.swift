@@ -2,24 +2,29 @@ import SwiftUI
 
 struct KeyView: View {
     
-    let letter: String
-    let icon: String
     @EnvironmentObject private var vM: GameViewModel
+    let letter: String?
+    let icon: String?
+    let letterKeyAction: ((String) -> Void)?
+    let iconKeyAction: (() -> Void)?
     
-    init(letter: String) {
+    init(letter: String, action: @escaping (String) -> Void) {
         self.letter = letter
-        self.icon = ""
+        self.icon = nil
+        self.letterKeyAction = action
+        self.iconKeyAction = nil
     }
     
-    init(icon: String) {
+    init(icon: String, action: @escaping () -> Void) {
+        self.letter = nil
         self.icon = icon
-        self.letter = ""
+        self.letterKeyAction = nil
+        self.iconKeyAction = action
     }
     
     var body: some View {
-        if (icon == "") {
-            
-            Button(action: { vM.setFirstLetter(letter: letter) }) {
+        if let letter, let letterKeyAction {
+            Button(action: { letterKeyAction(letter) }) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 3)
                         .foregroundColor(.black)
@@ -35,30 +40,32 @@ struct KeyView: View {
                         .foregroundColor(.pink)
                 }
             }
-        } else {
-            ZStack {
-                RoundedRectangle(cornerRadius: 3)
-                    .foregroundColor(.black)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 3)
-                            .stroke(.pink, lineWidth: 2)
-                    )
-                    .frame(width: 50, height: 50)
-                
-                Image(systemName: icon)
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.white)
+        } else if let icon, let iconKeyAction {
+            Button(action: { iconKeyAction() }) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 3)
+                        .foregroundColor(.black)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 3)
+                                .stroke(.pink, lineWidth: 2)
+                        )
+                        .frame(width: 50, height: 50)
+                    
+                    Image(systemName: icon)
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.white)
+                }
             }
         }
     }
 }
 
-#Preview {
-    Group {
-        KeyView(letter: "K")
-        KeyView(icon: "delete.left")
-        KeyView(icon: "checkmark")
-    }
-    
-}
+//#Preview {
+//    Group {
+//        KeyView(letter: "K")
+//        KeyView(icon: "delete.left")
+//        KeyView(icon: "checkmark")
+//    }
+//    
+//}
