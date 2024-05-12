@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
+    
+    @ObservedObject private var vM = GameViewModel()
+    
     var body: some View {
         VStack {
             HeaderView()
             Spacer()
-            WordsGridView()
+            WordsGridView(vM: vM)
             Spacer()
             Spacer()
-            KeyboardView()
+            KeyboardView(vM: vM)
             Spacer()
         }
         .padding()

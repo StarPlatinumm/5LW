@@ -12,7 +12,7 @@ struct HeaderView: View {
             Image(systemName: "questionmark.circle")
         }
         .foregroundColor(.white)
-        .padding()
+        .padding(5)
     }
 }
 

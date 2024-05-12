@@ -1,11 +1,14 @@
 import SwiftUI
 
 struct WordsGridView: View {
-    var grid: [[String]] = Array(repeating: Array(repeating: "", count: 5), count: 6)
+
+    var currentRow: Int = 0
+    var currentCol: Int = 0
+    @State var vM: GameViewModel
     
     var body: some View {
         VStack(spacing: 5) {
-            ForEach(grid, id: \.self) { row in
+            ForEach(vM.grid, id: \.self) { row in
                 HStack(spacing: 5) {
                     ForEach(row, id: \.self) { letter in
                         LetterView(letter: letter, guessed: .none)
@@ -19,5 +22,5 @@ struct WordsGridView: View {
 
 
 #Preview {
-    WordsGridView()
+    WordsGridView(vM: GameViewModel())
 }

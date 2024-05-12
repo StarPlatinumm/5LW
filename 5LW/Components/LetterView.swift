@@ -17,7 +17,7 @@ struct LetterView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 2)
                 .fill(fillColor)
-                .frame(width: 60, height: 60)
+                .frame(width: 55, height: 55)
                 .padding(1)
                 .overlay(
                     RoundedRectangle(cornerRadius: 2)
@@ -25,7 +25,7 @@ struct LetterView: View {
                 )
             
             Text(letter)
-                .font(.system(size: min(50, 50) / 2))
+                .font(.system(size: 30))
                 .fontWeight(.bold)
                 .foregroundColor(.white)
         }
